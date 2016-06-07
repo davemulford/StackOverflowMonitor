@@ -1,0 +1,24 @@
+@using StackOverflowMonitor.ViewModels
+@model HomeViewModel
+@{
+    ViewData["Title"]  = "Home";
+    var viewmodel = Model;
+}
+
+<h3>@viewmodel.Feed.Title</h3>
+<h4>@viewmodel.Feed.SubTitle</h4>
+
+@foreach (var entry in viewmodel.Feed.Entries)
+{
+    <div class="question">
+        <a href="@entry.Url">@entry.Title</a>
+        <div class="question-info">
+            @foreach (var tag in entry.TagStrings)
+            {
+                <div class="inline tag">@tag</div>
+            }
+
+            <div class="inline faded">@entry.TimeString</div>
+        </div>
+    </div>
+}

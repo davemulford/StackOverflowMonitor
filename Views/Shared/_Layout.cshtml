@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - StackOverflow Monitor</title>
+
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <img class="applogo" src="~/images/shadowman.png" />
+                <span class="appname">StackOverflow Monitor</span>
+
+                <!-- TODO Add About page -->
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                @RenderBody()
+                <hr />
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                Made for .NET Core 1.0 RC2 by Red Hat
+            </div>
+        </div>
+    </body>
+</html>
