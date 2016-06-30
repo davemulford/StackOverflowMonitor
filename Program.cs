@@ -23,7 +23,7 @@ namespace StackOverflowMonitor
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseConfiguration(config)
                 .UseStartup<Startup>()
-                .UseUrls("http://0.0.0.0:5001")
+                .UseUrls("http://0.0.0.0:80")
                 .Build();
 
             host.Run();
