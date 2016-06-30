@@ -36,7 +36,7 @@
           "version": "1.0.0-preview2-final",
           "imports": "portable-net45+win8+dnxcore50"
         },
-    }
+    },
 
     "frameworks": {
         "netcoreapp1.0": {
