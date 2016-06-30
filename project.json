@@ -3,10 +3,15 @@
 
     "buildOptions": {
         "emitEntryPoint": true,
-        "preserveCompilationContext": true
+        "preserveCompilationContext": true,
+        "debugType": "portable"
     },
 
     "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        },
         "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
         "Microsoft.AspNetCore.Mvc": "1.0.0-*",
         "Microsoft.AspNetCore.Razor.Tools": {
@@ -26,16 +31,20 @@
         "System.Net.Http": "4.1.0",
         "System.Xml.XmlSerializer": "4.0.11-*"
     },
+      "tools": {
+        "Microsoft.AspNetCore.Razor.Tools": {
+          "version": "1.0.0-preview2-final",
+          "imports": "portable-net45+win8+dnxcore50"
+        },
+    }
 
     "frameworks": {
         "netcoreapp1.0": {
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "type": "platform",
-              "version": "1.0.0"
-            }
-          },
-          "imports": "dnxcore50"
+          "imports": [
+            "dotnet5.6",
+            "dnxcore50",
+            "portable-net45+win8"
+          ]
         }
       },
 
