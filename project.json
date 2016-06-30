@@ -37,6 +37,14 @@
           },
           "imports": "dnxcore50"
         }
-      }
+      },
 
+  "publishOptions": {
+    "include": [
+      "wwwroot",
+      "Views",
+      "appsettings.json",
+      "web.config"
+    ]
+  }
 }
