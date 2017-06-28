@@ -28,7 +28,7 @@
         "Microsoft.Extensions.PlatformAbstractions": "1.0.0-*",
         "Microsoft.Extensions.Logging.Console": "1.0.0-*",
         "Microsoft.Extensions.Logging.Debug": "1.0.0-*",
-        "System.Net.Http": "4.1.1",
+        "System.Net.Http": "4.*",
         "System.Xml.XmlSerializer": "4.3.0-*"
     },
       "tools": {
