@@ -11,11 +11,16 @@ namespace StackOverflowMonitor.Controllers
         [HttpGet("/")]
         public IActionResult Index()
         {
-            string url = @"http://stackoverflow.com/feeds/tag?tagnames=.net+linux&sort=newest";
+            string url = @"https://stackoverflow.com/feeds/tag?tagnames=.net+linux&sort=newest";
             var feedTask = Feed.DoFeedRequest(url);
             feedTask.Wait();
 
             string xml = feedTask.Result;
+            
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine(xml);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~");
+            
             var feed = Feed.GetFeedFromXml(xml);
 
             var viewmodel = new HomeViewModel();
